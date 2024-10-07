@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  :root {
+    --bg-color: #50506b;
+    --tel-bg-color: #3b3b4f;
+    --gray: #fff ;
+  }
+
+  h1 {
+    color: var(--gray);
+    margin: 30px;
+  }
+  
+  .main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 50px 15px;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    width: 95%;
+    height: 500px;
+  }
+
+  body {
+    background-color: var(--bg-color);
+  }
+
+  label {
+    color: black;
+    font-size: 1.5rem;
+    margin-top: 10px;
+  }
+
+  .phone-bg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: var(--gray) ;
+    width: 300px;
+    border: 25px solid rgb(37, 33, 33);
+    height: 600px;
+    border-radius: 30px 30px 1px 1px;
+  }
+
+  .phone-btn {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 300px;
+    height: auto;
+    background-color: rgb(37, 33, 33);
+    padding: 10px;
+    border-radius: 0 0 30px 30px;
+  }
+
+  .button-st {
+    width: 90px;
+    height: 40px;
+    margin: 10px;
+  }
+
+  input {
+    width: 80%;
+    height: 40px;
+    font-size: 1.3rem;
+    margin-top: 30px;
+  }
+
+  #results-div {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    text-align: center;
+  }

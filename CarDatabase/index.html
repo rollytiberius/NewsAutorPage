@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Car Database</title>
+</head>
+<body>
+    <main id="main" class="main"></main>
+    <h1 class="title" id="title"></h1>
+    <form id="car-input-form" class >
+        <label for="car-input"><h3>Input details here</h3></label><br>
+        <label for="Reg">Car Registration: 
+            <input type="text" id="car-reg" placeholder="Car-REG">    
+        </label>
+        
+        <br>
+        <label for="first-name">User First name: 
+            <input type="text" id="owner-first-name" placeholder=" First Name ">
+        </label>
+        
+        <br>
+        <label for="last-name">User Last name:
+            <input type="text" id="owner-last-name" placeholder=" Last Name ">
+        </label>
+        
+        <br>
+        <label for="email">Email: 
+            <input type="email" name="email" id="owner-email" placeholder="email@email.com" >
+        </label>
+
+        <br>
+        <label for="phone">Phone:
+            <input type="number" id="owner-phone" placeholder=" Phone Nr">
+        </label>
+
+        <label for="description">Problem Description: </label>
+        <textarea type="text" name="description" id="description"></textarea>
+        <div class="buttons-div" id="buttons-cont"><button type="submit" id="submit-button">Submit</button>
+        <button type="reset">Reset</button>
+    </div>     
+    </form>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

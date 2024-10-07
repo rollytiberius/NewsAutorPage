@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Classes</title>
+</head>
+<body>
+    <h2 id="title" >Classes: The Basics ::</h2>
+
+    <script type="text/javascript" >
+         let title = document.getElementById("title")
+         title.innerText = "Javasctipt is amaizing"
+
+        class Rectangle {
+            // Setup the 
+            constructor (_width, _height, _color) {
+                console.log("The rectangle is being created")
+
+                this.width = _width;
+                this.height = _height;
+                this.color = _color;
+            }
+        }
+    
+    let myRectangle1 = new Rectangle(10, 6, "Red")
+    let myRectangle2 = new Rectangle(15, 67, "Green")
+    </script>
+    
+</body>
+</html>
