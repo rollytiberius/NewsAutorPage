@@ -16,15 +16,57 @@ let score = 0;
 let round = 1; 
 let rolls = 0; 
 
+const rollDice = () => {
+  diceValuesArr = [];
+
+  for (let i = 0; i < 5; i++) {
+    const randomDice = Math.floor(Math.random() * 6) + 1;
+    diceValuesArr.push(randomDice);
+  };
+
+  listOfAllDice.forEach((dice, index) => {
+    dice.textContent = diceValuesArr[index];
+  });
+};
+
+const updateStats = () => {
+  rollsElement.textContent = rolls;
+  roundElement.textContent = round;
+};
+
+const updateRadioOption = (index, score) => {
+  scoreInputs[index].disabled = false
+  scoreInputs[index].value = score
+  scoreSpans[index].textContent = `, score = ${score}`
+}
+
+
+const getHighestDuplicates = (arrayOfNumbers) => {
+    arrayOfNumbers.forEach((item, index) => {
+      
+    })
+}
+
+
+
+rollDiceBtn.addEventListener("click", () => {
+  if (rolls === 3) {
+    alert("You have made three rolls this round. Please select a score.");
+  } else {
+    rolls++;
+    rollDice();
+    updateStats();
+  }
+});
+
 rulesBtn.addEventListener("click", () => {
-    if (isModalShowing == false) {
-        rulesContainer.style.display = "block"
-        rulesBtn.textContent = "Hide rules"
-        isModalShowing = true
-    }else {
-        rulesContainer.style.display = "none"
-        rulesBtn.textContent = "Show rules"
-        isModalShowing = false
-    }
-    
-})
+  isModalShowing = !isModalShowing;
+
+  if (isModalShowing) {
+    rulesBtn.textContent = "Hide rules";
+    rulesContainer.style.display = "block";
+  } else {
+    rulesBtn.textContent = "Show rules";
+    rulesContainer.style.display = "none";
+  }
+});
