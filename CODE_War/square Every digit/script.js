@@ -51,3 +51,8 @@ let answer = squareArray.join('')
   }
 
 console.log(squareDigits(9119))
+
+
+//Somthin interesting
+
+// Another thing 
