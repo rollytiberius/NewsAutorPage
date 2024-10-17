@@ -8,14 +8,36 @@ let authorDataArr = [];
 fetch('https://cdn.freecodecamp.org/curriculum/news-author-page/authors.json')
   .then((res) => res.json())
   .then((data) => {
-    console.log(data);   
+    authorDataArr = data;
+    displayAuthors(authorDataArr.slice(startingIndex, endingIndex));  
   })
   .catch((err) => {
     console.error(`There was an error: ${err}`);
   });
 
+const fetchMoreAuthors = () => {
+  startingIndex += 8;
+  endingIndex += 8;
+
+  displayAuthors(authorDataArr.slice(startingIndex, endingIndex));
+  if (authorDataArr.length <= endingIndex) {
+    loadMoreBtn.disabled = true
+    loadMoreBtn.textContent = "No more data to load"
+  }
+};
+
 const displayAuthors = (authors) => {
   authors.forEach(({ author, image, url, bio }, index) => {
-
+    authorContainer.innerHTML += `
+    <div id="${index}" class="user-card">
+      <h2 class="author-name">${author}</h2>
+      <img class="user-img" src="${image}" alt="${author} avatar" />
+      <div class="purple-divider"></div>
+      <p class="bio">${bio}</p>
+      <a class="author-link" href="${url}" target="_blank">${author}'s author page</a>
+    </div>
+  `;
   });
 };
+
+loadMoreBtn.addEventListener("click", fetchMoreAuthors)
